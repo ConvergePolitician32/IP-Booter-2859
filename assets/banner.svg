@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d14"/>
+      <stop offset="55%" stop-color="#12161f"/>
+      <stop offset="100%" stop-color="#1a0b0d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff2d3d" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ff2d3d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="headGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#ff4d5a"/>
+      <stop offset="100%" stop-color="#ff2d3d"/>
+    </linearGradient>
+    <linearGradient id="nodeLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff2d3d" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ff2d3d" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" fill="url(#bg)"/>
+
+  <!-- ambient glow behind headline -->
+  <ellipse cx="330" cy="180" rx="420" ry="260" fill="url(#glow)"/>
+
+  <!-- faint grid suggesting network/server field -->
+  <g stroke="#ff2d3d" stroke-opacity="0.08">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="360"/>
+    <line x1="450" y1="0" x2="450" y2="360"/>
+    <line x1="700" y1="0" x2="700" y2="360"/>
+    <line x1="950" y1="0" x2="950" y2="360"/>
+  </g>
+
+  <!-- network / attack lines converging on right side -->
+  <g stroke="url(#nodeLine)" stroke-width="1.5" fill="none" opacity="0.8">
+    <path d="M1140 60 L950 140"/>
+    <path d="M1140 100 L920 170"/>
+    <path d="M1140 150 L900 190"/>
+    <path d="M1140 200 L920 210"/>
+    <path d="M1140 250 L950 230"/>
+    <path d="M1140 300 L980 250"/>
+  </g>
+
+  <!-- radar rings on right, evoking scanning/DDoS pulse -->
+  <g transform="translate(940,190)">
+    <circle r="30" fill="none" stroke="#ff2d3d" stroke-opacity="0.5" stroke-width="2"/>
+    <circle r="60" fill="none" stroke="#ff2d3d" stroke-opacity="0.35" stroke-width="2"/>
+    <circle r="95" fill="none" stroke="#ff2d3d" stroke-opacity="0.22" stroke-width="2"/>
+    <circle r="135" fill="none" stroke="#ff2d3d" stroke-opacity="0.12" stroke-width="2"/>
+    <circle r="6" fill="#ff5a63"/>
+  </g>
+
+  <!-- scattered network nodes -->
+  <g fill="#ff5a63">
+    <circle cx="1020" cy="120" r="4"/>
+    <circle cx="1080" cy="90" r="3.5"/>
+    <circle cx="1060" cy="260" r="4"/>
+    <circle cx="1110" cy="230" r="3"/>
+    <circle cx="990" cy="270" r="3.5"/>
+    <circle cx="1010" cy="80" r="3"/>
+  </g>
+
+  <!-- warning-style chevrons hinting at overload/attack -->
+  <g stroke="#ff2d3d" stroke-width="4" fill="none" opacity="0.5" stroke-linecap="round">
+    <polyline points="60,300 90,280 60,260"/>
+    <polyline points="95,300 125,280 95,260"/>
+  </g>
+
+  <!-- headline -->
+  <text x="60" y="185" font-family="'Segoe UI', Arial, sans-serif" font-size="92" font-weight="700" fill="url(#headGrad)" textLength="520" lengthAdjust="spacingAndGlyphs">IP Booter</text>
+
+  <!-- tagline -->
+  <text x="60" y="235" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#c9ccd6" opacity="0.85" textLength="900" lengthAdjust="spacingAndGlyphs">I can't help create a description for an "IP Boo</text>
+
+  <!-- subtle underline accent -->
+  <rect x="60" y="255" width="240" height="4" fill="#ff2d3d" opacity="0.6"/>
+</svg>
